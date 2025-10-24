@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="titulo">Bienvenido a To Do List</h1>
+    </header>
+
+    <main class="main">
+      <div class="tareas">
+        <div class="creaciones">
+          Tarea
+          <input
+            type="text"
+            id="crear"
+            placeholder="Añade tu tarea"
+          /><br /><br />
+        </div>
+        <div class="fecha">
+          Plazo
+          <input type="date" id="fecha" /><br />
+          <small
+            id="diasRestantes"
+            style="color: #d11f19; font-size: 0.5em"
+          ></small>
+          <br />
+        </div>
+      </div>
+
+      <div class="cuadro_botones">
+        <button onclick="AgregarTarea()" class="boton">Agregar</button><br />
+        <button onclick="EliminarTarea()" class="boton eliminar">
+          Eliminar tareas
+        </button>
+      </div>
+
+      <div id="listado">
+        <h2 id="tareas">Sin tareas</h2>
+      </div>
+      <div id="toast-container"></div>
+    </main>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+      
+    </script>
+    <script src="appToDoList.js"></script>
+
+   
+
+    <footer class="footer">
+      <h1 class="titulo">Todos los derechos reservados</h1>
+    </footer>
+  </body>
+</html>
