@@ -87,14 +87,18 @@ window.addEventListener("load", cargarTareas);
             claseColor = "dias-restantes";
           } else if (dias === 0) {
             diasTexto = " (¡Es hoy!)";
-          } else {
+          }  else {
             alert("Fecha incorrecta");
             document.getElementById("diasRestantes").innerHTML =
               "Fecha incorrecta";
             return;
           }
         }
-
+        if(!fecha){
+          alert("ingrese fecha");
+          return;
+        }
+       
         let lista = document.getElementById("tareas");
 
         if (lista.textContent.includes("Sin tareas")) {
